@@ -1,0 +1,38 @@
+----Digits Classification Tasks---- 
+In order to run the USPS to MNIST experiment for 3 samples per samples using Our methods use:
+    python RunExperiment.py --Src "U" --Tgt "M" --SamplesPerClass 3 --Method "SDA_IO" --GPU_ID -1
+In order to run the USPS to MNIST experiment for 3 samples per samples using CCSA/dSNE/NEM use:
+    python RunExperiment.py --Src "U" --Tgt "M" --SamplesPerClass 3 --Method "CCSA" --GPU_ID -1
+    python RunExperiment.py --Src "U" --Tgt "M" --SamplesPerClass 3 --Method "dSNE" --GPU_ID -1
+    python RunExperiment.py --Src "U" --Tgt "M" --SamplesPerClass 3 --Method "NEM" --GPU_ID -1
+
+----Office Classification Tasks----
+In order to run the Amazon to Webcam experiment using Our methods use:
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "SDA_IO" --GPU_ID -1
+In order to run the Amazon to Webcam experiment using CCSA/dSNE/NEM use:
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "CCSA" --GPU_ID -1
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "dSNE" --GPU_ID -1
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "NEM" --GPU_ID -1
+
+----VisDA-C Classification Tasks----
+In order to run the Synthetic to Real experiment using Our methods use:
+    python RunExperiment.py --Src "S" --Tgt "R" --SamplesPerClass 10 --Method "SDA_IO" --GPU_ID -1
+In order to run the Synthetic to Real experiment using CCSA/dSNE/NEM use:
+    python RunExperiment.py --Src "S" --Tgt "R" --SamplesPerClass 10 --Method "CCSA" --GPU_ID -1
+    python RunExperiment.py --Src "S" --Tgt "R" --SamplesPerClass 10 --Method "dSNE" --GPU_ID -1
+    python RunExperiment.py --Src "S" --Tgt "R" --SamplesPerClass 10 --Method "NEM" --GPU_ID -1
+
+----CityCam Regression Tasks----
+    python RunExperiment.py --Src "CityCam" --Tgt "CityCam_495" --SamplesPerClass 20 --Method "SDA_IO" --GPU_ID -1
+     python RunExperiment.py --Src "CityCam" --Tgt "CityCam_495" --SamplesPerClass 50 --Method "SDA_IO" --GPU_ID -1
+     python RunExperiment.py --Src "CityCam" --Tgt "CityCam_495" --SamplesPerClass 100 --Method "SDA_IO" --GPU_ID -1
+     python RunExperiment.py --Src "CityCam" --Tgt "CityCam_495" --SamplesPerClass 200 --Method "SDA_IO" --GPU_ID -1
+
+----GPU----
+In order to use GPU, set GPU_ID to the device index:
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "SDA_IO" --GPU_ID 0
+
+----W&B----
+In order to log to W&B, set LogToWandb as True:
+    python RunExperiment.py --Src "A" --Tgt "W" --Method "SDA_IO" --GPU_ID 0 --LogToWandb True
+Remember to change the configurations according to your username. 
